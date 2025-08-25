@@ -1,12 +1,18 @@
 let deferredPrompt;
 const installBanner = document.getElementById('install-banner');
 const installButton = document.getElementById('install-btn');
+const cancellButton = document.getElementById('cancel-btn');
 
 // Captura o evento antes da instalação
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault(); // Impede o banner automático
   deferredPrompt = e; // Salva o evento
   installBanner.style.display = 'block'; // Mostra o banner personalizado
+});
+
+// Clique no botão de instalar
+installButton.addEventListener('click', async () => {
+    installBanner.style.display = 'none'; // Esconde o banner
 });
 
 // Clique no botão de instalar
