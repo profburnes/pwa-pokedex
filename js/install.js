@@ -11,7 +11,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 // Clique no botão de instalar
-installButton.addEventListener('click', async () => {
+cancellButton.addEventListener('click',(e) => {
     installBanner.style.display = 'none'; // Esconde o banner
 });
 
